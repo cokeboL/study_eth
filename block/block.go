@@ -56,16 +56,20 @@ func (b *Block) ReadFrom(r io.Reader) {
 	binary.Read(r, binary.LittleEndian, &b.Timestamp)
 	binary.Read(r, binary.LittleEndian, &b.DataLen)
 
-	data := make([]byte, b.DataLen)
-	binary.Read(r, binary.LittleEndian, data)
-	b.Data = string(data)
+	dataLen := b.DataLen
+	if b.DataLen < BLOCK_HASH_SIZE {
+		dataLen = BLOCK_HASH_SIZE
+	}
 
-	hash := make([]byte, BLOCK_HASH_SIZE)
-	binary.Read(r, binary.LittleEndian, hash)
-	b.PreHash = string(hash)
+	buf := make([]byte, dataLen)
+	binary.Read(r, binary.LittleEndian, buf[:b.DataLen])
+	b.Data = string(buf[:b.DataLen])
 
-	binary.Read(r, binary.LittleEndian, hash)
-	b.Hash = string(hash)
+	binary.Read(r, binary.LittleEndian, buf[:BLOCK_HASH_SIZE])
+	b.PreHash = string(buf[:BLOCK_HASH_SIZE])
+
+	binary.Read(r, binary.LittleEndian, buf[:BLOCK_HASH_SIZE])
+	b.Hash = string(buf[:BLOCK_HASH_SIZE])
 }
 
 // func (b *Block) Equal(other *Block) bool {
