@@ -41,8 +41,8 @@ func TestBlock(t *testing.T) {
 	t.Log("b3.Hash: ", b3.Hash)
 	t.Log("-----------------------------------------------------------")
 
-	buf := bytes.NewBuffer(nil)
 	t.Log("-----------------------------------------------------------")
+	buf := bytes.NewBuffer(nil)
 	b1.WriteTo(buf)
 	b.ReadFrom(buf)
 	if *b != *b1 {
@@ -55,6 +55,7 @@ func TestBlock(t *testing.T) {
 	t.Log("-- b1.PreHash: ", b.PreHash)
 	t.Log("-- b1.Hash: ", b.Hash)
 	t.Log("-----------------------------------------------------------")
+	buf = bytes.NewBuffer(nil)
 	b2.WriteTo(buf)
 	b.ReadFrom(buf)
 	if *b != *b2 {
@@ -67,6 +68,7 @@ func TestBlock(t *testing.T) {
 	t.Log("-- b2.PreHash: ", b.PreHash)
 	t.Log("-- b2.Hash: ", b.Hash)
 	t.Log("-----------------------------------------------------------")
+	buf = bytes.NewBuffer(nil)
 	b3.WriteTo(buf)
 	b.ReadFrom(buf)
 	if *b != *b3 {
