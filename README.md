@@ -4,6 +4,7 @@
 - http://me.tryblockchain.org/getting-up-to-speed-on-ethereum.html
 - http://me.tryblockchain.org/Ethereum-MerklePatriciaTree.html merkle tree
 - https://github.com/ethereum/wiki/wiki/White-Paper 以太坊白皮书
+- https://zhuanlan.zhihu.com/p/33779523 以太坊白皮书中英文
 
 ## 视频教程
 - https://www.youtube.com/watch?v=RhoZOjDeA68
