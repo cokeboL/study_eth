@@ -45,6 +45,9 @@ func TestBlock(t *testing.T) {
 	t.Log("-----------------------------------------------------------")
 	b1.WriteTo(buf)
 	b.ReadFrom(buf)
+	if *b != *b1 {
+		t.Fatal("b != b1")
+	}
 	t.Log("-- b1.Index: ", b.Index)
 	t.Log("-- b1.Timestamp: ", b.Timestamp)
 	t.Log("-- b1.DataLen: ", b.DataLen)
@@ -54,6 +57,9 @@ func TestBlock(t *testing.T) {
 	t.Log("-----------------------------------------------------------")
 	b2.WriteTo(buf)
 	b.ReadFrom(buf)
+	if *b != *b2 {
+		t.Fatal("b != b2")
+	}
 	t.Log("-- b2.Index: ", b.Index)
 	t.Log("-- b2.Timestamp: ", b.Timestamp)
 	t.Log("-- b2.DataLen: ", b.DataLen)
@@ -63,6 +69,9 @@ func TestBlock(t *testing.T) {
 	t.Log("-----------------------------------------------------------")
 	b3.WriteTo(buf)
 	b.ReadFrom(buf)
+	if *b != *b3 {
+		t.Fatal("b != b3")
+	}
 	t.Log("-- b3.Index: ", b.Index)
 	t.Log("-- b3.Timestamp: ", b.Timestamp)
 	t.Log("-- b3.DataLen: ", b.DataLen)
