@@ -12,6 +12,7 @@
 ## 相关项目
 - https://github.com/ethereum/go-ethereum/
 - https://github.com/cryptape/ethereum-bootstrap
+- https://github.com/ethereum/wiki/wiki/Dapp-using-Meteor DApp客户端
 
 ## 图书
 - 区块链核心算法解析
