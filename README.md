@@ -23,3 +23,8 @@
 - 区块链安全技术指南
 - 区块链开发实战:以太坊关键技术与案例分析
 - 以太坊技术详解与实战
+
+## 发布自己的智能合约
+- https://www.jianshu.com/p/3aa80732ed73
+- https://github.com/EthFans/wiki/wiki/%E6%99%BA%E8%83%BD%E5%90%88%E7%BA%A6
+- https://blog.csdn.net/sportshark/article/details/51855007
